@@ -1,0 +1,23 @@
+type Mutation{
+	createAlbum(album:AlbumInput):Album
+}
+
+type Query{
+	allAlbums:[Album]
+	getAlbumById(albumId:Int):Album
+}
+
+type Album{
+    id:ID!
+    title:String
+    genre:String
+    artist:String
+    price:Float
+}
+
+input AlbumInput{
+    title:String
+    genre:String
+    artist:String
+    price:Float
+}
